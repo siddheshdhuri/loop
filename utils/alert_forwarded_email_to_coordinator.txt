@@ -1,0 +1,9 @@
+Hello, </br>
+  
+An alert <b>{alert_id}</b> has been forwarded by {username} to {alert_info$uw}.</br>
+
+
+got to the app <a href='{config$app_link}'>Loop</a></br>
+
+Thanks,</br>
+Loop

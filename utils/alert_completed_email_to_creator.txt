@@ -1,0 +1,13 @@
+Hello, </br>
+
+The alert <b>{alert_id}</b> has been completed.</br>
+
+<b>Alert Raised:</b> {alert_raised} </br>
+<b>Alert Description:</b> {alert_description} </br>
+<b>Action:</b> {selected_action} </br>
+<b>Action Description:</b> {action_desc} </br>
+
+Please go to this link to view the details: <a href={config$app_link}>Loop</a> </br>
+
+Thanks,</br>
+Loop

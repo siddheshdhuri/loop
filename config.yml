@@ -1,0 +1,155 @@
+default:
+
+  database_server: 
+  
+  countries: ['France', 'Irealand', 'Germany', 'Netherlands', 'Spain', 'Belgium']
+  
+  types_of_claims: ['APC', 'PSC']
+  
+  uw_coordinators: 
+    France : "thimai.nguyen@hiscox.com"
+    Ireland : "thimai.nguyen@hiscox.com"
+    Germany : "thimai.nguyen@hiscox.com"
+    Netherlands : 'nerea.eguilazbarredo@hiscox.com'
+    Spain : 'nerea.delafuente@hiscox.com'
+    Belgium : 'nerea.eguilazbarredo@hiscox.com'
+  
+  uw_list: 
+    France : ["thimai.nguyen@hiscox.com"]
+    Ireland : ["thimai.nguyen@hiscox.com"]
+    Germany : ["thimai.nguyen@hiscox.com"]
+    Netherlands : ['nerea.eguilazbarredo@hiscox.com']
+    Spain : ['ana.silva@hiscox.com',
+            'ania.bosch@hiscox.com',
+            'benjamin.losada@hiscox.com',
+            'carolina.cardoso@hiscox.com',
+            'diogo.ogando@hiscox.com',
+            'elvira.garcia@hiscox.com',
+            'eva.peribanez@hiscox.com',
+            'ignacio.checa@hiscox.com',
+            'jesus.garciablanco@hiscox.com',
+            'jose.villanueva@hiscox.com',
+            'kaylee.grady@hiscox.com',
+            'lidia.martinez@hiscox.com',
+            'marta.rezende@hiscox.com',
+            'miguel.aguilar@hiscox.com',
+            'miguel.ferreira@hiscox.com',
+            'natalia.martin@hiscox.com',
+            'nerea.garcia@hiscox.com',
+            'nuno.fernandes@hiscox.com',
+            'pedro.cunha@hiscox.com',
+            'silvia.perez@hiscox.com']
+    Belgium : ['nerea.eguilazbarredo@hiscox.com']
+  
+    
+  
+  cc:
+    APC: "nerea.eguilazbarredo@hiscox.com"
+    PSC: "thimai.nguyen@hiscox.com"
+  
+  alerts_raised: ['Different risk- There is a discrepancy between what we want to insure and the actual characteristics of the insured property/liability under the policy (ex, activity not correct, protection means not in place, defect in the building that creates multiple similar claims).',
+'Wording issues- There are wording issues that bring out key differences between the intent and the application of the policy, whether they are found in the general or specific conditions.',
+'Behaviour of clients- The insured manifests behaviour that deviates from one in a “fair, open and transparent” relationship with us and results in an abnormal inflation of the claim.']
+  
+  alerts_db: "database/alerts_db.db"
+  
+  alerts_table: "alerts_table"
+  
+  assign_button_prefix: "assign_alert_"
+  select_uw_prefix: "select_uw_"
+  
+  
+  action_button_prefix: "action_alert_"
+  action_radio_prefix: "action_radio_"
+  action_text_area_prefix: "action_text_"
+  forward_uw_select_prefix: "forward_uw_select_"
+  forward_uw_button_prefix: "forward_uw_button_"
+  
+  action_radio_choices: ['Cancel Policy', 'Policy Modification', 'Nothing needs to be done']
+  action_radio_label: ""
+  
+  columns_to_show: ["alert_id", "alert_description", "creator", "coordinator", "uw", "status", "alert_created_date", "alert_assigned_date",  "alert_completed_date"]
+  
+  
+             
+  to_be_assigned: 'To be assigned'
+  active: 'Active'
+  completed: 'Completed'
+  
+  
+  creator_role: "creator"
+  coordinator_role: "coordinator"
+  uw_role: "uw"
+  
+  coordinator_sla: 7 #days
+  uw_sla: 28 #days
+  
+  
+  from_email: 'loop@hiscox.com'
+  
+  auth_db: 'database/auth.db'
+  
+  app_link: 'http://rserver.staging.hiscox.com:3939/connect/#/apps/121/access'
+  
+  is_test: TRUE
+  
+  create_alert_popup_message: "Alert {alert_id} Created and email sent to {alert_details_for_claim_ref$coordinator}. We will inform you who will be working on the alert within {config$coordinator_sla} days"
+  
+  alert_created_email_to_coordinator: "utils/alert_created_email_to_coordinator.txt"
+  alert_created_email_to_creator: "utils/alert_created_email_to_creator.txt"
+  
+  
+  alert_assigned_email_to_uw: "utils/alert_assigned_email_to_uw.txt"
+  alert_assigned_email_to_creator: "utils/alert_assigned_email_to_creator.txt"
+  
+  alert_completed_email_to_creator: "utils/alert_completed_email_to_creator.txt"
+  alert_completed_email_to_coordinator: "utils/alert_completed_email_to_coordinator.txt"
+  
+  alert_forwarded_email_to_creator: "utils/alert_forwarded_email_to_creator.txt"
+  alert_forwarded_email_to_coordinator: "utils/alert_forwarded_email_to_coordinator.txt"
+  alert_forwarded_email_to_uw: "utils/alert_forwarded_email_to_uw.txt"
+
+
+# TEST CONFIGURATION
+
+test:
+  uw_coordinators: 
+    France : "nerea.eguilazbarredo@hiscox.com"
+    Ireland : "nerea.eguilazbarredo@hiscox.com"
+    Germany : "nerea.eguilazbarredo@hiscox.com"
+    Netherlands : "nerea.eguilazbarredo@hiscox.com"
+    Spain : "nerea.delafuente@hiscox.com"
+    Belgium : "nerea.eguilazbarredo@hiscox.com"
+  
+  uw_list: 
+    France : ["sid.dhuri@hiscox.com", "uw", "thimai.nguyen@hiscox.com"]
+    Ireland : ["sid.dhuri@hiscox.com", "uw", "thimai.nguyen@hiscox.com"]
+    Germany : ["sid.dhuri@hiscox.com", "uw"]
+    Netherlands : ['sid.dhuri@hiscox.com', "uw", "thimai.nguyen@hiscox.com"]
+    Spain : ['ana.silva@hiscox.com',
+            'ania.bosch@hiscox.com',
+            'benjamin.losada@hiscox.com',
+            'carolina.cardoso@hiscox.com',
+            'diogo.ogando@hiscox.com',
+            'elvira.garcia@hiscox.com',
+            'eva.peribanez@hiscox.com',
+            'ignacio.checa@hiscox.com',
+            'jesus.garciablanco@hiscox.com',
+            'jose.villanueva@hiscox.com',
+            'kaylee.grady@hiscox.com',
+            'lidia.martinez@hiscox.com',
+            'marta.rezende@hiscox.com',
+            'miguel.aguilar@hiscox.com',
+            'miguel.ferreira@hiscox.com',
+            'natalia.martin@hiscox.com',
+            'nerea.garcia@hiscox.com',
+            'nuno.fernandes@hiscox.com',
+            'pedro.cunha@hiscox.com',
+            'silvia.perez@hiscox.com']
+    Belgium : ['sid.dhuri@hiscox.com', "uw", "thimai.nguyen@hiscox.com"]
+  
+  cc:
+    APC: "sid.dhuri@hiscox.com"
+    PSC: "sid.dhuri@hiscox.com"
+  
+production:

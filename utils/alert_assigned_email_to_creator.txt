@@ -1,0 +1,9 @@
+Hello, </br>
+
+The alert <b>{alert_id}</b> has been assigned to an underwriter an is now Active status </br>
+Please go to this link to view the status: <a href={config$app_link}>Loop</a> </br>
+
+Thanks,</br>
+Loop
+
+<img src="https://en.wikipedia.org/wiki/Office_Assistant#/media/File:Windows_11_Clippy_paperclip_emoji.png", width="100px"></img>

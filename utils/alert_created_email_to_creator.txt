@@ -1,0 +1,8 @@
+Hello, </br>
+
+Your alert has been created and will be reviewed. </br>
+
+We will come back to you in {config$coordinator_sla} days. </br>
+
+Thanks,</br>
+Loop

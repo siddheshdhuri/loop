@@ -1,0 +1,19 @@
+Hello, </br>
+  
+An alert <b>{alert_id}</b> has been created for you to be reviewed.</br>
+
+<b>Claim number:</b> {input$claim_number}</br>
+<b>Policy Number:</b> {input$policy_number}</br>
+<b>Country:</b> {input$claim_country}</br>
+<b>Type of input:</b> {input$type_of_claim}</br>
+<b>Alert Raised:</b> {input$alert_raised}</br>
+<b>Alert Description:</b> {input$alert_description}</br>
+<b>Alert ID:</b> {alert_id}</br>
+<b>Alert created by:</b> {reactive.values$username}</br>
+
+Please decide what are the next steps..</br>
+
+got to the app <a href='{config$app_link}'>Loop</a></br>
+
+Thanks,</br>
+Loop

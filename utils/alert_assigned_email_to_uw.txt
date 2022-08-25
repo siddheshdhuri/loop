@@ -1,0 +1,7 @@
+Hello, </br>
+
+The alert <b>{alert_id}</b> has been assigned to you. </br>.
+Please go to this link to view the details and take actions: <a href={config$app_link}>Loop</a> </br>
+
+Thanks,</br>
+Loop

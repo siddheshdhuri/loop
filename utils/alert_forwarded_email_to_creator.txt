@@ -1,0 +1,7 @@
+Hello, </br>
+
+The alert <b>{alert_id}</b> has been forwarded to underwriter {alert_info$uw} is now active status. </br>
+Please go to this link to view the status: <a href={config$app_link}>Loop</a> </br>
+
+Thanks, </br>
+Loop
